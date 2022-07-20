@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car{
+            constructor(name,model ,capacity ,engineno){
+                this.name=name;
+                this.model=model;
+                this.capacity=capacity;
+                this.engineno=engineno;
+            }
+            showdetail(){
+                    console.log(`
+                    CAR :${this.name}
+                    MODEL:${this.model}
+                    CAPACITY:${this.capacity}
+                    ENGINE :${this.engineno}
+                    `)
+            }
+        }
+        let c1=new Car('Audi','xyz','abc',12345)
+        // c1.showdetail();
+         
+        class Tesla extends Car{
+            constructor(name,model ,capacity ,engineno,fuel){
+             super(name,model ,capacity ,engineno);
+             this.fuel=fuel;
+                
+            }
+          
+            showdetail(){
+                    console.log(`
+                    CAR :${this.name}
+                    MODEL:${this.model}
+                    CAPACITY:${this.capacity}
+                    ENGINE :${this.engineno}
+                    Tesla Fuel is ${this.fuel}
+                
+                    `)
+            }
+        }
+        let t1 =new Tesla('Tesla','bb','new',4567,'electricity')
+        t1.showdetail();
+    
+
+    </script>
+</body>
+</html>
